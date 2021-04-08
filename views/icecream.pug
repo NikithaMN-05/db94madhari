@@ -1,0 +1,40 @@
+extends layout
+
+block content
+  h1= title
+  
+  div(class="container-fluid")
+        div(class="row")
+            -
+                let icecream = [
+                    {
+                        "flavour": "chocolate",
+                        "color": "brown",
+                        "cost": "150"                        
+                    },
+                    {
+                        "flavour": "vanilla",
+                        "color": "white",                        
+                        "cost": "100"
+                    },
+                    {
+                        "flavour": "strawberry",
+                        "color": "pink",
+                        "cost": "120"
+                    },                   
+                ]
+            each ice,goal in icecream  
+                div(class="col-sm-2" onclick=`buy(${goal})`) #{ice.flavour}
+                div(class="col-sm-2" ) #{ice.color}
+                 div(class="col-sm-2" ) #{ice.cost}
+
+
+  script.
+     
+       function buy(a)
+       {
+         alert(`You purchased Item ${a+1}`)
+       }
+
+   
+            
