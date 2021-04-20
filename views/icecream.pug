@@ -2,35 +2,20 @@ extends layout
 
 block content
   h1= title
-  
   div(class="container-fluid")
-        div(class="row")
-            -
-                let icecream = [
-                    {
-                        "flavour": "chocolate",
-                        "color": "brown",
-                        "cost": "150"                        
-                    },
-                    {
-                        "flavour": "vanilla",
-                        "color": "white",                        
-                        "cost": "100"
-                    },
-                    {
-                        "flavour": "strawberry",
-                        "color": "pink",
-                        "cost": "120"
-                    },                   
-                ]
-            each ice,goal in icecream  
-                div(class="col-sm-2" onclick=`buy(${goal})`) #{ice.flavour}
-                div(class="col-sm-2" ) #{ice.color}
-                 div(class="col-sm-2" ) #{ice.cost}
+        div(class="row m-1") 
+        - let icecream = results;
+          each ice,goal in icecream 
+            -let destination = `dispatch(\"/icecream/update?id=${ice._id}\")` 
+             div(class="col-sm-4 bg-info m-1 p-3") #{ice.flavour}-#{ice.color} - #{ice.cost}
+             button.btn( class="btn-primary ml-1", onclick= destination) Update 
 
 
   script.
-     
+     function dispatch(path){
+       window.location.href=path
+       }
+
        function buy(a)
        {
          alert(`You purchased Item ${a+1}`)

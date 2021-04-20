@@ -6,3 +6,51 @@ body {
 a {
   color: #00B7FF;
 }
+.costumeAttr {
+  background-color: brown;
+  width: 180px;
+  margin: 4px;
+  text-align: center;
+  color: white;
+  padding: 9px;
+  border-radius: 6px;
+  font-weight: bolder;
+
+}
+
+.newAttr {
+  width: 180px;
+  margin: 4px;
+  text-align: center;
+  padding: 9px;
+  border-radius: 6px;
+  font-weight: bolder;
+
+}
+
+#newtitle{
+  color: #123456;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: underline;
+}
+
+.newvalues{
+  margin-right: 3px;
+  margin-bottom: 0;
+  padding: 9px;
+  justify-content:center;
+  font-weight: bold;
+  border-bottom: 2px solid rgb(19, 115, 224);
+  border-left: 2px solid  rgb(19, 115, 224);
+  background-color: rgb(151, 196, 196);
+  border-radius: 2px;
+}
+.specialstyles{
+    border-top: 2px solid red;
+    width: 50%;
+}
+.newvalues:hover{
+  background-color: rgb(255, 176, 4);
+  color: black;
+}
