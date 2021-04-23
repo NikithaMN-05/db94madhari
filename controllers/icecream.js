@@ -38,9 +38,12 @@ exports.icecream_create_post = async function (req, res) {
         res.send(result);
     }
     catch (err) {
-        res.send(`{"error": ${err}}`)
-        res.status(500);
+       // res.send(`{"error": ${err}}`)
+       res.status(500)
+    res.send(`{"error": Error creating ${err}}`); 
     }
+        
+    
 };
 // Handle icecream delete form on DELETE.
 exports.icecream_delete = async function(req, res) {
